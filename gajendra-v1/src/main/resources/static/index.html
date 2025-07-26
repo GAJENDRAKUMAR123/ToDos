@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My TODO App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-gray-800">TODO List</h1>
+
+    <!-- Form to add a new TODO -->
+    <form id="todo-form" class="bg-white p-6 rounded shadow-md w-full max-w-md space-y-4">
+        <input
+            type="text"
+            id="todo-input"
+            placeholder="Enter task"
+            required
+            class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+        <input
+            type="text"
+            id="desc-input"
+            placeholder="Description"
+            required
+            class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+        <input
+            type="text"
+            id="compltion-input"
+            placeholder="true / false"
+            required
+            class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+
+        <button
+            type="submit"
+            class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+        >
+            Add
+        </button>
+    </form>
+
+    <!-- Header to show status -->
+    <h2 id="todo-header" class="text-xl font-semibold mt-10 text-gray-700"></h2>
+
+    <!-- List to display all TODOs -->
+    <ul id="todo-list" class="w-full max-w-md mt-4 space-y-4"></ul>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
